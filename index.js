@@ -62,7 +62,9 @@ function onSubmit() {
   $('.mealDetail').on('submit', '#mealDetail', event => {
     event.preventDefault();
     render();
-    storeMeal();
+    let currentMeal = Object.assign({}, store.customerInfo);
+    storeMeal(currentMeal);
+    console.log(store.mealArray);
     formReset();
   });
 }
@@ -79,8 +81,8 @@ function updateMyInfo(){
   store.myInfo.update(store.customerInfo.tip);
 }
 
-function storeMeal(){
-  store.mealArray.push(store.customerInfo);
+function storeMeal(currentMeal){
+  store.mealArray.push(currentMeal);
 }
 
 function updateCustomerCharges(){
@@ -106,8 +108,8 @@ function updateMyEarnings(){
 }
 
 function reset(){
-  $('.reset').on('submit', event => {
-    event.preventDefault();
+  $('.reset').on('click', event => {
+    console.log('110');
     formReset();
     store.reset();
     updateCustomerCharges();

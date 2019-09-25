@@ -19,15 +19,15 @@
         <form id = "mealDetail" name = "mealDetail">
           <div class = "formGroup">
               <label for="baseMealPrice">Base Meal Price: $</label>
-              <input type="number" name="baseMealPrice" class="baseMealPrice customerInfo" placeholder="">
+              <input type="number" step=".01" name="baseMealPrice" min="0" class="baseMealPrice customerInfo" placeholder="">
           </div>
           <div class = "formGroup">
             <label for="taxRate">Tax Rate: %</label>
-                <input type="number" name="taxRate" class="taxRate customerInfo" placeholder="">
+                <input type="number" step=".01" name="taxRate" min="0" max="100" class="taxRate customerInfo" placeholder="">
           </div>
           <div class = "formGroup">
             <label for="tipPercent">Tip Percentage: %</label>
-              <input type="number" name="tipPercent" class="tipPercent customerInfo" placeholder="">
+              <input type="number" step=".01" name="tipPercent" min="0" max="100" class="tipPercent customerInfo" placeholder="">
           </div>
           <div class = "buttonGroup">
               <button type="submit" class = mealDetailButton>Submit</button>
