@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+.customerInfo {
+  display: inline-block;
+  width: 70px;
+  text-align: right;
+}
+
+/* target classes not elements*/
+label {
+  display: inline-block;
+  width: 140px;
+  text-align: left;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+}
